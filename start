@@ -86,8 +86,11 @@ main() {
 	case "$1" in
     set)            shift; set_value "$input" "$@";;
     get)            shift; read_value "$input" "$@";;
+    y2j)            shift; echo "$input" | y2j;;
+    j2y)            shift; echo "$input" | j2y;;
     *)              show_usage;;
 	esac
 }
 
 main "$@"
+
